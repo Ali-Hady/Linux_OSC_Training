@@ -1,0 +1,17 @@
+git config --global user.name Ali-Hady
+git config --global user.email aliabdelhady43@gmail.com
+git clone https://github.com/Ali-Hady/Linux_OSC_Training.git
+cd task-2
+touch greeting.txt
+echo "hello world" >> greetings.txt
+cd ..
+git add .
+git commit -m "Added greeting"
+git checkout -b intro
+echo "I love Git" >> task-2/greetings.txt
+git add .
+git commit -m "Added I love Git"
+git checkout main
+git merge intro
+git push origin main
+git push origin v1
